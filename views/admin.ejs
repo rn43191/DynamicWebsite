@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Complaints Register</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/mian.css">
+
+</head>
+
+<body>
+	<div style="text-align : center; margin-top: 50px; color: #36304a;">
+		<h1>Submitted Complaints</h1>
+	</div>
+	<div style="width:60%; margin: 10px auto;  height:550px;" class="text-center">
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+					<th>Complaint ID</th>
+					<th>Username</th>
+					<th>Email</th>
+					<th>Full Name</th>
+					<th>Complaint</th>
+                </tr>
+            </thead>
+			<tbody>
+				<%
+				if(userData.length!=0){
+					var i=1;
+					userData.forEach(function(data){
+				%>
+                    <tr>
+                        <td><%=data.compID %></td>
+						<td><%=data.username %></td>
+						<td><%=data.email %></td>
+						<td><%=data.fullname %></td>
+						<td><%=data.complaint %></a></td>
+                    </tr>
+				<%  i++;})} %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

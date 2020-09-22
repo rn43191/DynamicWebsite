@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login Page</title>
+	<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/home.css" />
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container office-login">
+            <form role="form" method="post" action="/admin">
+                <h1>Care Service Office</h1>
+                <span>Provide Care Service username and password</span>
+                <input type="text" placeholder="Office username" name="name" required />
+                <input type="password" placeholder="Office password" name="pass" required />
+                <div><p style = "color : red ;margin : auto; text-align: center; " id = "p"> <%= error2 %></p></div>
+                <button>Log In</button>
+            </form>
+        </div>
+        <div class="form-container agent-login">
+            <form role="form" method="post" action="/user">
+                <h1>Customer Login</h1>
+                <span>Provide Customer username and password</span>
+                <input type="text" placeholder="Customer username" name="name" required />
+                <input type="password" placeholder="Customer password" name="pass" required />
+                <div><p style = "color : red ;margin : auto; text-align: center; " id = "p"> <%= error1 %></p></div>
+                <button>Log In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Customer</h1>
+                    <p>To register a complaint , please login with your personal info.</p>
+                    <button class="ghost" id="agentOpen">Customer Log In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Customer Care Service</h1>
+                    <p>Enter the care service credentials and check complaints.</p>
+                    <button class="ghost" id="officeOpen">Care Service Log In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+		const officeButton = document.getElementById('officeOpen');
+		const agentButton = document.getElementById('agentOpen');
+		const container = document.getElementById('container');
+
+		officeButton.addEventListener('click', () => {
+			container.classList.add("right-panel-active");
+		});
+
+		agentButton.addEventListener('click', () => {
+			container.classList.remove("right-panel-active");
+		});
+	</script>
+</body>
+
+</html>

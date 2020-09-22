@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Complaint Page</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/user_page.css">
+</head>
+<body>
+    <div class="container contact-form">
+        <div class="contact-image">
+            <img src="/images/icon1.png" alt="complaint_icon"/>
+        </div>
+        <form role="form" method="post" action="/feed">
+            <h3>Drop Us your Complaint</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="username" class="form-control" placeholder="Username" value="" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="email" class="form-control" placeholder="Email" value="" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="btnSubmit" class="btnContact" value="Drop Complaint" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <textarea name="complaint" class="form-control" placeholder="Your Complaint" style="width: 100%; height: 100px;" required></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
