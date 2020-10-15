@@ -18,6 +18,5 @@ app.post("/admin", admin.putview);
 
 
 app.listen(3000, function() {
-    console.log("...");
-
+    console.log("Hmmm...");
 });
