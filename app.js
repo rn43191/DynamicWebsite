@@ -16,6 +16,8 @@ app.post("/feed", user.feedpost);
 admin = require("./routes/admin");
 app.post("/admin", admin.putview);
 
-app.listen(8000, function() {
-    console.log("server started...");
+
+app.listen(3000, function() {
+    console.log("...");
+
 });
